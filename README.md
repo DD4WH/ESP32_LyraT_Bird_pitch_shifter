@@ -1,4 +1,22 @@
-# ESP32-LyraT Audio Passthrough
+# ESP32-LyraT Bird Song Pitch Shifter
+
+This is my very first attempt to use the ESP32 LyraT platform.
+
+Audio is taken from the AUX input or the in-built mics and is pitch-shifted 2x, 3x, or 4x.
+
+This helps people with high-frequency loss to hear birds that otherwise would get unnoticed.
+
+Very first prototype.
+
+ToDo:
+
+* use touch buttons to switch between 1x (passthru, but with reduced volume to prevent feedback!), 2x, 3x, 4x pitch shift
+* use touch buttons for volume control
+
+
+Based on:
+
+#Audio Passthrough
 ### Short Description
 This [esp-idf](https://github.com/espressif/esp-idf)-based application for the [ESP32-LyraT](https://www.espressif.com/en/products/hardware/esp32-lyrat) reads stereo samples from the board's analog "AUX IN" input jack and outputs them through the "PHONE JACK" analog output again. It does so without all the overhead that [esp-adf](https://github.com/espressif/esp-adf) brings at the cost of not being as portable as [esp-adf's pipeline_passthrough](https://github.com/espressif/esp-adf/tree/master/examples/audio_processing/pipeline_passthru).
 

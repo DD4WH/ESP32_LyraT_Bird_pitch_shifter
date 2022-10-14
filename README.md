@@ -12,11 +12,14 @@ ToDo:
 
 * use touch buttons to switch between 1x (passthru, but with reduced volume to prevent feedback!), 2x, 3x, 4x pitch shift
 * use touch buttons for volume control
+* document how to manipulate the hardware, so the AUX input actually works --> there is a hardware error in the AUX input circuit
+* document mic arrangement for the binaural headphones
+* insert links to "Hear birds again"
 
 
 Based on:
 
-#Audio Passthrough
+# Audio Passthrough
 ### Short Description
 This [esp-idf](https://github.com/espressif/esp-idf)-based application for the [ESP32-LyraT](https://www.espressif.com/en/products/hardware/esp32-lyrat) reads stereo samples from the board's analog "AUX IN" input jack and outputs them through the "PHONE JACK" analog output again. It does so without all the overhead that [esp-adf](https://github.com/espressif/esp-adf) brings at the cost of not being as portable as [esp-adf's pipeline_passthrough](https://github.com/espressif/esp-adf/tree/master/examples/audio_processing/pipeline_passthru).
 

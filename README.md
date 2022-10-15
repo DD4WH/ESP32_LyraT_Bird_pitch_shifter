@@ -10,11 +10,11 @@ Very first prototype.
 
 ### ToDo:
 
-    use touch buttons to switch between 1x (passthru, but with reduced volume to prevent feedback!), 2x, 3x, 4x pitch shift
-    use touch buttons for volume control
-    document how to manipulate the hardware, so the AUX input actually works --> there is a hardware error in the AUX input circuit
-    document mic arrangement for the binaural headphones
-    insert links to "Hear birds again"
+use touch buttons to switch between 1x (passthru, but with reduced volume to prevent feedback!), 2x, 3x, 4x pitch shift
+use touch buttons for volume control
+document how to manipulate the hardware, so the AUX input actually works --> there is a hardware error in the AUX input circuit
+document mic arrangement for the binaural headphones
+insert links to "Hear birds again"
 
 Based on:
 

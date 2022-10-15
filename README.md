@@ -16,6 +16,12 @@ Very first prototype.
 * document mic arrangement for the binaural headphones
 * insert links to "Hear birds again"
 
+### Done:
+* added ESP-DSP lib to components to be able to use FIR filters and window functions
+* added multiple i2s_read and write in order to be able to use larger audio block size: now  I2S uses 128 samples, and the pitch shift window is of size 6 x 128 = 768 samples @48ksps sample rate
+* 
+
+
 Based on:
 
 # ESP32-LyraT Audio Passthrough

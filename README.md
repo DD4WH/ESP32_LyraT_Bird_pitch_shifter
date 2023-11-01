@@ -9,9 +9,10 @@ The hardware uses:
 * 2x AOM5024 low noise high SNR electret microphones
 * audio codec to amplify and digitize the incoming audio
 * ESP32 processor to do Digital Signal Processing
-* I use a pitch shifting algorithm in the time domain based on an idea by Lang Elliott & Herb Susmann for the "Hear birds again"-project
+* the processor aquires the audio in real time and implements the pitch shifting algorithm and outputs the audio to the headphones
  
 Thanks to Harold Mills I was able to implement **pitch shifting in the time domain** . The algorithm is based on an idea by Lang Elliott & Herb Susmann for the "Hear birds again"-project, specifically for the now deprecated SongFinder pitch shifter units. The algorithm can shift the audio down by a factor of two (one octave), three (1.5 octaves) or four (two octaves). Here is a graph showing the implementation for the case of downshifting by 4. Many thanks go to Harold Mills & Lang Elliott for explaining this algorithm to me and answering my questions ! :-)
+
 ![grafik](https://user-images.githubusercontent.com/14326464/194013110-f01d8397-0838-47c0-8373-3df8eebc1835.png)
 
 

@@ -22,7 +22,7 @@ My self-built binaural headset with Koss KSC75 headset and two low-noise AOM5024
 
 The LyraT board has a construction error in the Line input. I modified the line inputs, so that both inputs now have a Mic bias and are separated from each other:
 
-
+![grafik](https://github.com/DD4WH/ESP32_LyraT_Bird_pitch_shifter/blob/main/20231101_193702.jpg)
 
 Based on:
 

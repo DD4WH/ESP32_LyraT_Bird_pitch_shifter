@@ -1,26 +1,24 @@
 # ESP32-LyraT Bird Song Pitch Shifter
 
-This is my very first attempt to use the ESP32 LyraT platform.
+Inspired by the "Hear birds again project" I built this device for my father.
 
-Audio is taken from the AUX input or the in-built mics and is pitch-shifted 2x, 3x, or 4x.
+Many people suffer from high frequency hearing loss, especially people above the age of 50. Lang Elliott had the idea of lowering the pitch of bird songs with a special device in order to help bird enthusiasts with high frequency hearing loss to hear those higher-pitched bird songs [https://hearbirdsagain.org/]. These higher-pitched songs would normally be outside of their hearing ranges. His idea motivated me to try this on the ESP32 LyraT platform. This is my very first attempt to use the ESP32 LyraT platform.
 
-This helps people with high-frequency loss to hear birds that otherwise would get unnoticed.
+The hardware uses:
 
-Very first prototype.
+* 2x AOM5024 low noise high SNR electret microphones
+* audio codec to amplify and digitize the incoming audio
+* ESP32 processor to do Digital Signal Processing
+* I use a pitch shifting algorithm in the time domain based on an idea by Lang Elliott & Herb Susmann for the "Hear birds again"-project
+ 
+Thanks to Harold Mills I was able to implement **pitch shifting in the time domain** . The algorithm is based on an idea by Lang Elliott & Herb Susmann for the "Hear birds again"-project, specifically for the now deprecated SongFinder pitch shifter units. The algorithm can shift the audio down by a factor of two (one octave), three (1.5 octaves) or four (two octaves). Here is a graph showing the implementation for the case of downshifting by 4. Many thanks go to Harold Mills & Lang Elliott for explaining this algorithm to me and answering my questions ! :-)
+![grafik](https://user-images.githubusercontent.com/14326464/194013110-f01d8397-0838-47c0-8373-3df8eebc1835.png)
 
-### ToDo:
 
-* use touch buttons to switch between 1x (passthru, but with reduced volume to prevent feedback!), 2x, 3x, 4x pitch shift
-* use touch buttons for volume control
-* document how to manipulate the hardware, so the AUX input actually works --> there is a hardware error in the AUX input circuit
-* document mic arrangement for the binaural headphones
-* insert links to "Hear birds again"
 
-### Done:
-* added ESP-DSP lib to components to be able to use FIR filters and window functions
-* added multiple i2s_read and write in order to be able to use larger audio block size: now  I2S uses 128 samples, and the pitch shift window is of size 6 x 128 = 768 samples @48ksps sample rate
-* added FIR lowpass filter after the final zero stuffing / resampling to eliminate aliases
-* added code to dynamically calculate FIR coeffs on the ESP32
+![grafik](https://user-images.githubusercontent.com/14326464/192025404-fd7cb0a5-075f-4cdd-96d4-60ec2c061aa3.png)
+My self-built binaural headset with Koss KSC75 headset and two low-noise AOM5024 electret mics fixed on the earbuds. It works very well and provides very low noise signals and enables the user to spatially locate the transposed audio like you would do with the original audio signal. See HERE (https://hearbirdsagain.org/binaural-headset/) for an explanation of the binaural headset and the building instructions. 
+
 
 
 Based on:

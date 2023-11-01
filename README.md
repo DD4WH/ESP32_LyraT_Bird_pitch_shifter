@@ -4,6 +4,8 @@ Inspired by the "Hear birds again project" I built this device for my father.
 
 Many people suffer from high frequency hearing loss, especially people above the age of 50. Lang Elliott had the idea of lowering the pitch of bird songs with a special device in order to help bird enthusiasts with high frequency hearing loss to hear those higher-pitched bird songs [https://hearbirdsagain.org/]. These higher-pitched songs would normally be outside of their hearing ranges. His idea motivated me to try this on the ESP32 LyraT platform. This is my very first attempt to use the ESP32 LyraT platform.
 
+![grafik](https://github.com/DD4WH/ESP32_LyraT_Bird_pitch_shifter/blob/main/20231101_194020.jpg)
+
 The hardware uses:
 
 * 2x AOM5024 low noise high SNR electret microphones

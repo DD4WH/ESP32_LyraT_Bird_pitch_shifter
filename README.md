@@ -20,6 +20,8 @@ Thanks to Harold Mills I was able to implement **pitch shifting in the time doma
 ![grafik](https://user-images.githubusercontent.com/14326464/192025404-fd7cb0a5-075f-4cdd-96d4-60ec2c061aa3.png)
 My self-built binaural headset with Koss KSC75 headset and two low-noise AOM5024 electret mics fixed on the earbuds. It works very well and provides very low noise signals and enables the user to spatially locate the transposed audio like you would do with the original audio signal. See HERE (https://hearbirdsagain.org/binaural-headset/) for an explanation of the binaural headset and the building instructions. 
 
+The LyraT board has a construction error in the Line input. I modified the line inputs, so that both inputs now have a Mic bias and are separated from each other:
+
 
 
 Based on:
